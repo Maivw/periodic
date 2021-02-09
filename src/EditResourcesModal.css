@@ -1,0 +1,14 @@
+.editModal__item{
+  border: 2px solid red;
+  height: 5rem;
+  width: 10rem;
+  
+}
+
+.editModal {
+  display: flex;
+  justify-content: space-evenly;
+}
+.editModal__removeButton {
+  color: red;
+}

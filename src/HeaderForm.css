@@ -1,0 +1,53 @@
+.headerForm, .headerForm__buttons {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.headerForm {
+  padding: 3rem 2rem;
+  border: 2px solid red;
+  width: 80%;
+  margin: 0 auto;
+}
+.headerForm__buttons {
+  width: 20%;
+}
+
+.headerForm__buttonCancel, .headerForm__buttonSave {
+  width: 6.5rem;
+  padding: 0.8rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+}
+.headerForm__buttonCancel {
+  background-color: #F7667B;
+}
+.headerForm__buttonCancel:hover {
+  background-color: #E46C77;
+  transition: all 0.25s linear;
+  color: whitesmoke;
+}
+.headerForm__buttonSave {
+  background-color: #4BE8BC;
+  
+}
+.headerForm__buttonSave:hover {
+  background-color: #67DCBA;
+  transition: all 0.25s linear;
+  color: whitesmoke;
+}
+.headerForm__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #434343;
+}
+.headerForm__title > span:before {
+  content: ">";
+  margin: 0.5rem 1rem 0.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+
+}

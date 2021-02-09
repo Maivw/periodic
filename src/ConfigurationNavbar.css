@@ -1,0 +1,33 @@
+.configurationNav {
+  background-color: #5022FA;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+}
+/* .configurationNav .active {
+  background-color: red;
+  visibility:visible;
+}
+.configurationNav .hidden {
+  visibility: hidden;
+} */
+.configurationNav__column{
+  padding: 0.5rem 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.configurationNav__column:hover {
+  color: #5946A6;
+  background-color: #EDEAFE;
+  border-radius: 0.5rem;
+  transition: all 0.5s linear;
+
+}
+
+.configurationNav__wrapper {
+  position: relative;
+}

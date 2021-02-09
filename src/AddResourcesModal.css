@@ -1,0 +1,18 @@
+.addResource__button {
+  background-color:red;
+  width: 100%;
+  padding: 0.8rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: #4BE8BC;
+  
+}
+.addResource__list {
+  position: relative;
+}
+.addResource__button:hover {
+  background-color: #67DCBA;
+  transition: all 0.25s linear;
+  color: whitesmoke;
+}

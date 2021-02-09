@@ -1,0 +1,16 @@
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 2rem;
+  color: #9B9B9B;
+  background-color: #F7F7F7;
+  position: relative;
+}
+.navbar__column {
+  cursor: pointer;
+}
+.navbar__column:hover {
+  color:#575757;
+  transition: all 0.5s linear;
+}
