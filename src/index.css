@@ -10,4 +10,5 @@ html, body {
 }
 .app {
   position: relative;
+  background-color: #F7F7F7;
 }

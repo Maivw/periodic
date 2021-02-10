@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import EditResource from "../EditResource/EditResource";
+import CreateResource from "../CreateResource/CreateResource";
 import "./ShowResourcesModal.css";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import resourcesData from "./resources-data.json";
-import CreateResource from "./CreateResource";
-import EditResource from "./EditResource";
+import resourcesData from "../dataFiles/resources-data.json";
 
 function ShowResourcesModal({
 	showModal,
@@ -16,7 +16,6 @@ function ShowResourcesModal({
 	const [openEditResource, setOpenEditResource] = useState(false);
 	const [title, setTitle] = useState(false);
 	const handleClose = () => {
-		// onCloseResources(false);
 		setAnchorEl(null);
 	};
 	const openCreateForm = () => {

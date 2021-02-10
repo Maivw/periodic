@@ -1,30 +1,26 @@
 import React, { useState } from "react";
-import "./CreateResource.css";
+import EditResourcesModal from "./EditResourcesModal";
+import resourcesData from "../dataFiles/resources-data.json";
+import HeaderForm from "../Header/HeaderForm";
+import "./EditResource.css";
 import TextField from "@material-ui/core/TextField";
-import HeaderForm from "./HeaderForm";
 import MenuItem from "@material-ui/core/MenuItem";
-import resourcesData from "./resources-data.json";
-import AddResourcesModal from "./AddResourcesModal";
 
-function CreateResource({ openCreateResource, title }) {
+function EditResource({ title, openEditResource }) {
 	const [resourceSelected, setResourceSelected] = useState();
-	const [modalVisible, setModalVisible] = useState(false);
-	const [visibleCreateScreen, setVisibleCreateScreen] = useState(true);
-	const handleChange = (event) => {
+	const [visibleEditScreen, setVisibleEditScreen] = useState(true);
+	const [modalEditVisible, setModalEditVisible] = useState(false);
+	const handleChangeInput = (event) => {
 		setResourceSelected(event.target.value);
-	};
-	const openAddResourcesModal = () => {
-		console.log("again");
-		setModalVisible(!modalVisible);
 	};
 
 	return (
 		<>
-			{openCreateResource && visibleCreateScreen ? (
-				<div className="createResource">
+			{openEditResource && visibleEditScreen && (
+				<div className="editResource">
 					<HeaderForm
 						title={title}
-						onCloseScreen={() => setVisibleCreateScreen(false)}
+						onCloseScreen={() => setVisibleEditScreen(false)}
 					/>
 					<div className="createResource__body">
 						<div className="createResource__sidebar"></div>
@@ -50,7 +46,7 @@ function CreateResource({ openCreateResource, title }) {
 									select
 									label="Provider"
 									value={resourceSelected}
-									onChange={handleChange}
+									onChange={handleChangeInput}
 									className="createResource__inputField"
 								>
 									{resourcesData.map((resource) => (
@@ -60,31 +56,20 @@ function CreateResource({ openCreateResource, title }) {
 									))}
 								</TextField>
 							</div>
-							<div
-								className="createResource__button"
-								onClick={openAddResourcesModal}
-							>
+							<div className="createResource__button">
 								<div className="createResource__buttonSign"></div>
-								<div
-									className={`createResource__buttonText ${
-										resourceSelected ? "active" : "disable"
-									}`}
-								>
-									ADD RESOURCE
-								</div>
+								<div>ADD RESOURCE</div>
 							</div>
-							{modalVisible ? (
-								<AddResourcesModal
-									modalVisible={modalVisible}
-									onCloseModal={() => setModalVisible(false)}
-								/>
-							) : null}
+							<EditResourcesModal
+								modalVisible={modalEditVisible}
+								onCloseModal={() => setModalEditVisible(false)}
+							/>
 						</form>
 					</div>
 				</div>
-			) : null}
+			)}
 		</>
 	);
 }
 
-export default CreateResource;
+export default EditResource;

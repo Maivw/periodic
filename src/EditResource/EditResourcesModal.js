@@ -34,18 +34,3 @@ function EditResourcesModal({ modalVisible }) {
 }
 
 export default EditResourcesModal;
-
-{
-	/* <Dialog open={open} onClose={handleClose}>
-					<DialogContent>
-						<DialogContentText id="alert-dialog-description">
-							{data.name}
-						</DialogContentText>
-					</DialogContent>
-					<DialogActions>
-						<Button onClick={removeResource} color="primary">
-							Disagree
-						</Button>
-					</DialogActions>
-				</Dialog> */
-}

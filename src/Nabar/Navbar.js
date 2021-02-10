@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import ConfigurationNavbar from "./ConfigurationNavbar";
+import ConfigurationNavbar from "../ConfigurationFile/ConfigurationNavbar";
 
 function Navbar() {
 	const [openConfiguration, setOpenConfiguration] = useState(false);

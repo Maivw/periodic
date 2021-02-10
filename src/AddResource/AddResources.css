@@ -1,0 +1,41 @@
+.addResource__button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: #4BE8BC;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-bottom: -2rem;
+  position: sticky;
+  
+}
+.addResource__button:hover {
+  background-color: #67DCBA;
+  transition: all 0.25s linear;
+  color: whitesmoke;
+}
+.addResource__input {
+  width: 90%;
+  margin-left: 1rem !important;
+}
+.addResource__item {
+  padding-left: 2rem !important;
+  /* width: 90% !important; */
+}
+.addResource__itemName {
+  color:#575757 
+}
+.addResources__list {
+  position: relative;
+}
+
+.addResource__wrapper{
+  margin-top: 1rem;
+  padding-top: 2rem;
+  width: 20rem;
+  box-shadow: 0 0 10px 0 rgba(87, 86, 86, 0.151);
+  border-radius: 0.5rem;
+}

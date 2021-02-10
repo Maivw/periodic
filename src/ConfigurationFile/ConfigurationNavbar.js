@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ConfigurationNavbar.css";
-import ShowResourcesModal from "./ShowResourcesModal";
+import ShowResourcesModal from "../ShowListResource/ShowResourcesModal";
 
 function ConfigurationNavbar({ open }) {
 	const [showResources, setShowResources] = useState(false);
