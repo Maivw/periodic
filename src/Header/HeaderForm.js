@@ -6,7 +6,7 @@ function HeaderForm({ title, onCloseScreen }) {
 	return (
 		<Grid container item className="headerForm">
 			<Grid item xs={8} sm={9} md={10} lg={10} className="headerForm__title">
-				Resource Groups <span>{title}</span>
+				Resource Groups <div className="headerForm__title-text">{title}</div>
 			</Grid>
 			<Grid item xs={4} sm={3} md={2} lg={2} className="headerForm__buttons">
 				<button

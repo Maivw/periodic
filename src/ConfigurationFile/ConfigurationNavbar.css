@@ -1,12 +1,24 @@
 .configurationNav {
+  position: relative;
   background-color: #5022FA;
   display: flex;
   justify-content: space-evenly;
   width: 85% !important;
   margin: 0 auto !important;
   padding: 2rem 0;
-  border-radius: 0.5rem;
-  
+  border-radius: 0.3rem; 
+  border: none;
+}
+.configurationNav:after {
+  content: "";
+  position: absolute;
+  top:-2.7rem;
+  right: 30%;
+  border-left: 1.5rem solid transparent;
+  border-top: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid #5022FA;
+  z-index: 2;
 }
 
 .configurationNav__column{

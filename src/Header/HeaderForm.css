@@ -8,7 +8,6 @@
   width: 85%;
   margin: 0 auto;
   background-color: #F7F7F7;
-  /* border: 2px solid red; */
 }
 .headerForm__buttons {
   width: 20%;
@@ -43,13 +42,24 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #434343;
-  /* border: 2px solid red; */
+  display: flex;
+  
 }
-.headerForm__title > span:before {
+.headerForm__title-text{
+  position: relative;
+  color: #434343;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+.headerForm__title-text:before {
   content: ">";
-  margin: 0.5rem 1rem 0.5rem;
-  font-size: 2rem;
-  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  
 }
 @media screen and (max-width: 500px) {
   .headerForm  {
