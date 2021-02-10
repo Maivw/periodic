@@ -29,6 +29,7 @@
   top: 50%;
   right: 10%;
   transform: translate(-50%, -50%);
+  color: #9B9B9B;
 }
 .header__userImage {
   position: absolute;

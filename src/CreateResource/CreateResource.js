@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function CreateResource({ openCreateResource, title }) {
+function CreateResource({ showModal, title = "Create" }) {
 	const classes = useStyles();
 	const [visibleCreateScreen, setVisibleCreateScreen] = useState(true);
 	const [resourceName, setResourceName] = useState("");
@@ -50,7 +50,7 @@ function CreateResource({ openCreateResource, title }) {
 
 	return (
 		<>
-			{openCreateResource && visibleCreateScreen ? (
+			{showModal && visibleCreateScreen ? (
 				<div className="createResource">
 					<HeaderForm
 						title={title}

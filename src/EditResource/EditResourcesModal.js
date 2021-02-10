@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./EditResourcesModal.css";
 
 const resourcesRemove = ["Beach Ball", "Resource user", "Beach Hairstylist"];
-function EditResourcesModal({ modalVisible }) {
-	const [open, setOpen] = useState(true);
+function EditResourcesModal() {
+	//const { modalVisible } = props;
+	// const [open, setOpen] = useState(true);
 	const [resources, setResources] = useState([
 		"Beach Ball",
 		"Resource user",
