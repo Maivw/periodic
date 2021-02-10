@@ -6,17 +6,16 @@
   background-color: #F7F7F7;
 }
 
-.reateResource__button-disable , .reateResource__button-active{
-  
+.createResource__button-disable , .createResource__button-active{
   display: flex;
-  margin: 3rem 0 0 0;
+  margin-top:2rem;
   font-weight: 500;
 }
-.reateResource__button-disable {
+.createResource__button-disable {
   color: #575757;
   cursor: not-allowed;
 }
-.reateResource__button-active {
+.createResource__button-active {
   color: #4BE8BC;
   cursor: pointer;
 }
@@ -65,6 +64,7 @@
 }
 .createResource__title {
   font-weight: 700;
+  padding:1rem 0;
 }
 .MuiInput-formControl {
   color:#575757 !important;
@@ -73,4 +73,137 @@
 .MuiSelect-selectMenu, .MuiInput-inputTypeSearch {
   font-size: 1rem !important; 
   padding-left: 1rem !important
+}
+
+.selectedResources {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+.selectedResource {
+  border: 0.1px solid #ededed;
+  width: 30%;
+  height: 6rem;
+  position: relative;
+  border-radius: 0.3rem;
+}
+.selectedResource__detail {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  position: relative !important; 
+}
+.selectedResource__detail-text {
+  display: flex;
+  flex-direction: column;
+  color: #575757 ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
+.selectedResource__detail-avatar {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-95%, -50%);
+ 
+  background-color: #FEE5E8 !important;
+}
+.selectedResource__detail-text  > span {
+  color: #9B9B9B;
+}
+.selectedResource__removeSign {
+  position: absolute;
+  right: 5%;
+  top: 0.5rem
+}
+
+
+@media screen and (max-width: 500px) {
+  .selectedResources {
+    padding-top: 0.5rem;
+  }
+  .selectedResource {
+    height: 3rem;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .createResource__button-disable , .createResource__button-active{
+    margin-top:0rem;
+  }
+  .selectedResource__detail-text   {
+    font-size: 0.5rem;
+    
+  }
+  .selectedResource__detail-text  > span {
+    color: #9B9B9B;
+    font-size: 0.3rem;
+  }
+  .selectedResource__detail-avatar {
+    width: 1rem!important;
+    height: 1rem!important;
+  }
+  .selectedResource__removeIcon {
+    font-size: 1rem !important;
+  }
+} 
+
+@media screen and (max-width: 768px) and (min-width:501px){
+  .selectedResource__detail-text   {
+    font-size: 0.7rem;
+  }
+  .selectedResource__detail-text  > span {
+    font-size: 0.5rem;
+  }
+  .selectedResource__detail-avatar {
+    width: 2rem!important;
+    height: 2rem!important;
+  }
+  .selectedResource__removeIcon {
+    font-size: 1.2rem !important;
+  }
+}
+
+ @media screen and (max-width: 1024px) and (min-width: 769px){
+  .createResource__button-disable , .createResource__button-active{
+    margin-top:1rem;
+  }
+  .selectedResource__detail-text   {
+    font-size: 0.9rem;
+  }
+  .selectedResource__detail-text  > span {
+    font-size: 0.7rem;
+  }
+  .selectedResource__detail-avatar {
+    width: 2.5rem!important;
+    height: 2.5rem!important;
+  }
+  .selectedResource__removeIcon {
+    font-size: 1.5rem !important;
+  }
+  
+} 
+
+@media screen and (max-width: 1600px) and (min-width: 1025px){
+  
+  .createResource__button-disable , .createResource__button-active{
+    margin-top:1.2rem;
+  }
+  .selectedResource__detail-text   {
+    font-size: 1,2rem;
+  }
+  .selectedResource__detail-text  > span {
+    font-size: 0.9rem;
+  }
+  .selectedResource__detail-avatar {
+    width: 4rem!important;
+    height: 4rem!important; 
+  }
+  .selectedResource__removeIcon {
+    font-size: 2rem !important;
+  }
 }

@@ -39,18 +39,36 @@ function ConfigurationNavbar({ open }) {
 		setShowResources(!showResources);
 	};
 	return (
-		<Grid containerclassName="configurationNav__wrapper">
-			<div className={`configurationNav ${open ? "active" : "hidden"}`}>
-				<div className="configurationNav__column">providers</div>
-				<div className="configurationNav__column">bookables</div>
-				<div className="configurationNav__column" onClick={openResources}>
+		<>
+			<Grid
+				container
+				item
+				className={`configurationNav ${open ? "active" : "hidden"}`}
+				style={{ display: "flex", flexDirection: "row" }}
+			>
+				<Grid item xs={2} className="configurationNav__column">
+					providers
+				</Grid>
+				<Grid item xs={2} className="configurationNav__column">
+					bookables
+				</Grid>
+				<Grid
+					item
+					xs={2}
+					className="configurationNav__column"
+					onClick={openResources}
+				>
 					resources
-				</div>
-				<div className="configurationNav__column">forms</div>
-				<div className="configurationNav__column">messages</div>
-			</div>
+				</Grid>
+				<Grid item xs={2} className="configurationNav__column">
+					forms
+				</Grid>
+				<Grid item xs={2} className="configurationNav__column">
+					messages
+				</Grid>
+			</Grid>
 			{showResources ? <CreateResource showModal={showResources} /> : null}
-		</Grid>
+		</>
 	);
 }
 

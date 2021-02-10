@@ -11,22 +11,25 @@ import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import AddResources from "../AddResource/AddResources";
+import Avatar from "@material-ui/core/Avatar";
+import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles((theme) => ({
 	formControl: {
 		margin: theme.spacing(1),
 		width: "100%",
 		fontSize: "14px",
-		marginTop: "1rem",
 	},
 	input: {
 		margin: theme.spacing(1),
 		width: "100%",
 		fontSize: 50,
-		marginTop: "1rem",
 	},
 	menuItem: {
 		color: "#9B9B9B",
+	},
+	icon: {
+		fontSize: "2rem",
 	},
 }));
 
@@ -102,8 +105,8 @@ function CreateResource({ showModal, title = "Create" }) {
 										onClick={(e) => setIsOpenSelect(true)}
 										className={`${
 											provider
-												? "reateResource__button-active"
-												: "reateResource__button-disable"
+												? "createResource__button-active"
+												: "createResource__button-disable"
 										}`}
 									>
 										<div
@@ -125,17 +128,28 @@ function CreateResource({ showModal, title = "Create" }) {
 									</Grid>
 								) : null}
 
-								<Grid container item>
+								<Grid container item className="selectedResources">
 									{listSelected.map((item) => (
-										<div key={item.id} style={{ marginRight: 10 }}>
+										<div key={item.id} className="selectedResource">
 											<div
-												style={{ color: "red" }}
+												className="selectedResource__removeSign"
 												onClick={() => onRemoveItemFromResource(item)}
 											>
-												X
+												<CloseIcon className="selectedResource__removeIcon" />
 											</div>
-											<div>{item.name}</div>
-											<div>required</div>
+
+											<div className="selectedResource__detail">
+												<Avatar
+													src=""
+													className="selectedResource__detail-avatar"
+												>
+													{item?.name[0]}
+												</Avatar>
+												<div className="selectedResource__detail-text">
+													<div>{item.name}</div>
+													<span>required</span>
+												</div>
+											</div>
 										</div>
 									))}
 								</Grid>

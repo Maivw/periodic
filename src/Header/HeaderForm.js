@@ -1,13 +1,14 @@
 import React from "react";
 import "./HeaderForm.css";
+import Grid from "@material-ui/core/Grid";
 
 function HeaderForm({ title, onCloseScreen }) {
 	return (
-		<div className="headerForm">
-			<div className="headerForm__title">
+		<Grid container item className="headerForm">
+			<Grid item xs={8} sm={9} md={10} lg={10} className="headerForm__title">
 				Resource Groups <span>{title}</span>
-			</div>
-			<div className="headerForm__buttons">
+			</Grid>
+			<Grid item xs={4} sm={3} md={2} lg={2} className="headerForm__buttons">
 				<button
 					className="headerForm__buttonCancel"
 					onClick={() => onCloseScreen(false)}
@@ -15,8 +16,8 @@ function HeaderForm({ title, onCloseScreen }) {
 					CANCEL
 				</button>
 				<button className="headerForm__buttonSave">SAVE</button>
-			</div>
-		</div>
+			</Grid>
+		</Grid>
 	);
 }
 
