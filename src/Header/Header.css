@@ -19,7 +19,7 @@
   width: 10rem;
   height: 3rem;
   margin-right: 3rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -29,6 +29,7 @@
   top: 50%;
   right: 10%;
   transform: translate(-50%, -50%);
+  color: #9B9B9B;
 }
 .header__userImage {
   position: absolute;

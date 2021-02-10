@@ -1,7 +1,6 @@
 .headerForm, .headerForm__buttons {
   display: flex;
   justify-content: space-between;
- 
 }
 
 .headerForm {
@@ -9,11 +8,10 @@
   width: 85%;
   margin: 0 auto;
   background-color: #F7F7F7;
-  border: 2px solid red;
 }
 .headerForm__buttons {
   width: 20%;
-  border: 2px solid red;
+  
 }
 
 .headerForm__buttonCancel, .headerForm__buttonSave {
@@ -34,7 +32,6 @@
 }
 .headerForm__buttonSave {
   background-color: #4BE8BC;
-  
 }
 .headerForm__buttonSave:hover {
   background-color: #67DCBA;
@@ -45,12 +42,112 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #434343;
-  border: 2px solid red;
+  display: flex;
+  
 }
-.headerForm__title > span:before {
+.headerForm__title-text{
+  position: relative;
+  color: #434343;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+.headerForm__title-text:before {
   content: ">";
-  margin: 0.5rem 1rem 0.5rem;
-  font-size: 2rem;
-  font-weight: 900;
-
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  
 }
+@media screen and (max-width: 500px) {
+  .headerForm  {
+    width: 100%;
+    padding: 2rem 0rem;
+  }
+  .headerForm__title {
+    font-size: 1.2rem;
+  }
+  .headerForm__title > span:before {
+    content: ">";
+    margin: 0.3rem;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  .headerForm__buttonCancel, .headerForm__buttonSave {
+    width: 4.5rem;
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+  
+}
+@media screen and (max-width: 768px) and (min-width:501px){
+  .headerForm  {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 2rem 0rem;
+  }
+  .headerForm__title {
+    font-size: 2.5rem;
+  }
+  .headerForm__title > span:before {
+    content: ">";
+    margin: 0.5rem 1rem 0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .headerForm__buttonCancel, .headerForm__buttonSave {
+    width: 4.5rem;
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+}
+
+ @media screen and (max-width: 1024px) and (min-width: 769px){
+  .headerForm  {
+    width: 87% !important;
+    margin: 0 auto !important;
+    padding: 2.5rem 0rem;
+  }
+  .headerForm__title {
+    font-size: 1.5rem;
+  }
+  .headerForm__title > span:before {
+    content: ">";
+    margin: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+  .headerForm__buttonCancel, .headerForm__buttonSave {
+    width: 4rem;
+    padding: 0.7rem 0;
+    font-size: 13px;
+  }
+  
+} 
+@media screen and (max-width: 1600px) and (min-width: 1025px){
+  .headerForm  {
+    width: 85% !important;
+    margin: 0 auto !important;
+    padding: 3rem 0rem;
+  }
+  .headerForm__title {
+    font-size: 2rem;
+  }
+  .headerForm__title > span:before {
+    content: ">";
+    margin: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+  .headerForm__buttonCancel, .headerForm__buttonSave {
+    width: 6rem;
+    padding: 0.8rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+  }
+  
+} 
