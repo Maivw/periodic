@@ -39,6 +39,7 @@ function AddResources({ onAddSelect, optionsList }) {
 				label="search for a resource"
 				type="search"
 				value={search}
+				autoComplete="off"
 				onChange={(e) => setSearch(e.target.value)}
 				className="addResource__input"
 			/>
