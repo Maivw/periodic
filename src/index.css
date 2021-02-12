@@ -8,8 +8,11 @@ html, body {
   height: 100vh;
   overflow-x: hidden;
   font-family: sans-serif;
+  background-color: #F7F7F7;
+
 }
 .app {
   position: relative;
   background-color: #F7F7F7;
+
 }
