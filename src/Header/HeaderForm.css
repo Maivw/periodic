@@ -1,3 +1,4 @@
+@import "../_utils.css";
 .headerForm, .headerForm__buttons {
   display: flex;
   justify-content: space-between;
@@ -5,13 +6,12 @@
 
 .headerForm {
   padding: 3rem 0rem;
-  width: 85%;
+  width: var(--width-container-full);
   margin: 0 auto;
-  background-color: #F7F7F7;
+  background-color:var(--main-bg-color);
 }
 .headerForm__buttons {
   width: 20%;
-  
 }
 
 .headerForm__buttonCancel, .headerForm__buttonSave {
@@ -27,27 +27,27 @@
 }
 .headerForm__buttonCancel:hover {
   background-color: #E46C77;
-  transition: all 0.25s linear;
+  transition: var(--transition-hover);
   color: whitesmoke;
 }
 .headerForm__buttonSave {
-  background-color: #4BE8BC;
+  background-color:var(--button-active-bg-color);
 }
 .headerForm__buttonSave:hover {
   background-color: #67DCBA;
-  transition: all 0.25s linear;
+  transition: var(--transition-hover);
   color: whitesmoke;
 }
 .headerForm__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #434343;
+  color:var(--text-header-form);
   display: flex;
   
 }
 .headerForm__title-text{
   position: relative;
-  color: #434343;
+  color:var(--text-header-form);
   margin-left: 1rem;
   padding-left: 1rem;
 }
@@ -85,7 +85,7 @@
 @media screen and (max-width: 768px) and (min-width:501px){
   .headerForm  {
     width: 90% !important;
-    margin: 0 auto !important;
+    margin: var(--margin-0-auto)!important;
     padding: 2rem 0rem;
   }
   .headerForm__title {
@@ -107,7 +107,7 @@
  @media screen and (max-width: 1024px) and (min-width: 769px){
   .headerForm  {
     width: 87% !important;
-    margin: 0 auto !important;
+    margin: var(--margin-0-auto)!important;
     padding: 2.5rem 0rem;
   }
   .headerForm__title {
@@ -128,8 +128,8 @@
 } 
 @media screen and (max-width: 1600px) and (min-width: 1025px){
   .headerForm  {
-    width: 85% !important;
-    margin: 0 auto !important;
+    width: var(--width-container-full)!important;
+    margin: var(--margin-0-auto) !important;
     padding: 3rem 0rem;
   }
   .headerForm__title {

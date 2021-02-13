@@ -1,0 +1,16 @@
+:root {
+  --main-bg-color: #F7F7F7;
+  --main-header-bg: #4A4A4A;
+  --main-config-bg: #5022FA;
+  --bg-avatar-item: #FEE5E8;
+  --button-active-bg-color:#4BE8BC;
+  --header-height: 3rem;
+  --text-color-primary: #9B9B9B;
+  --text-color-hover: #575757;
+  --text-header-form: #434343;
+  --transition-hover: all 0.5s linear;
+  --box-shadow: 0 0 10px 0 rgba(87, 86, 86, 0.151);
+  --width-container-full:  85%;
+  --margin-0-auto: 0 auto;
+
+}

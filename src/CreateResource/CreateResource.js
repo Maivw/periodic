@@ -18,18 +18,14 @@ const useStyles = makeStyles((theme) => ({
 	formControl: {
 		margin: theme.spacing(1),
 		width: "100%",
-		fontSize: "14px",
+		fontSize: "1rem",
 	},
 	input: {
 		margin: theme.spacing(1),
 		width: "100%",
-		fontSize: 50,
 	},
 	menuItem: {
 		color: "#9B9B9B",
-	},
-	icon: {
-		fontSize: "2rem",
 	},
 }));
 
@@ -54,19 +50,19 @@ function CreateResource({ showModal, title = "Create" }) {
 	return (
 		<>
 			{showModal && visibleCreateScreen ? (
-				<div className="createResource">
+				<div className="create">
 					<HeaderForm
 						title={title}
 						onCloseScreen={() => setVisibleCreateScreen(false)}
 					/>
-					<div className="createResource__body">
-						<div className="createResource__sidebar">
-							<div className="createResource__sidebar-item">
+					<div className="create__body">
+						<div className="create__sidebar">
+							<div className="create__sidebar-item">
 								<span>Basic Info</span>
 							</div>
 						</div>
-						<div className="createResource__form">
-							<div className="createResource__title">Basic Info</div>
+						<div className="create__form">
+							<div className="create__title">Basic Info</div>
 							<Grid container>
 								<Grid container item>
 									<TextField
@@ -79,20 +75,13 @@ function CreateResource({ showModal, title = "Create" }) {
 								</Grid>
 								<Grid container item>
 									<FormControl className={classes.formControl}>
-										<InputLabel
-											htmlFor="age-native-required"
-											style={{ color: provider ? "#B29AFF" : "#9B9B9B" }}
-										>
-											Provider *
-										</InputLabel>
+										<InputLabel>Provider *</InputLabel>
 										<Select
-											labelId="demo-simple-select-required-label"
-											id="demo-simple-select-required"
 											value={provider}
 											onChange={(e) => setProvider(e.target.value)}
 											style={{ width: "100%" }}
 										>
-											{providerData.map((e, i) => (
+											{providerData.map((e) => (
 												<MenuItem key={e.id} value={e.id}>
 													<span className={classes.menuItem}> {e.name}</span>
 												</MenuItem>
@@ -105,15 +94,15 @@ function CreateResource({ showModal, title = "Create" }) {
 										onClick={(e) => setIsOpenSelect(true)}
 										className={`${
 											provider
-												? "createResource__button-active"
-												: "createResource__button-disable"
+												? "create__button-active"
+												: "create__button-disable"
 										}`}
 									>
 										<div
 											className={`${
 												provider
-													? "createResource__buttonSign-active"
-													: "createResource__buttonSign-disable"
+													? "create__buttonSign-active"
+													: "create__buttonSign-disable"
 											}`}
 										></div>
 										ADD RESOURCE

@@ -1,18 +1,19 @@
+@import "../_utils.css";
 .navbar {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
   padding: 3rem 2rem 2rem 2rem;
-  color: #9B9B9B;
-  background-color: #F7F7F7;
+  color:var(--text-color-primary);
+  background-color: var(--main-bg-color);
   position: relative;
 }
 .navbar__column {
   cursor: pointer;
 }
 .navbar__column:hover {
-  color:#575757;
-  transition: all 0.5s linear;
+  color:var(--text-color-hover);
+  transition: var(--transition-hover) ;
 }
 
 @media screen and (max-width: 500px) {

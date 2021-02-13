@@ -1,10 +1,11 @@
+@import "../_utils.css";
 .configurationNav {
   position: relative;
-  background-color: #5022FA;
+  background-color:var( --main-config-bg) ;
   display: flex;
   justify-content: space-evenly;
-  width: 85% !important;
-  margin: 0 auto !important;
+  width: var(--width-container-full) !important;
+  margin: var(--margin-0-auto) !important;
   padding: 2rem 0;
   border-radius: 0.3rem; 
   border: none;
@@ -17,7 +18,7 @@
   border-left: 1.5rem solid transparent;
   border-top: 1.5rem solid transparent;
   border-right: 1.5rem solid transparent;
-  border-bottom: 1.5rem solid #5022FA;
+  border-bottom: 1.5rem solid var( --main-config-bg);
   z-index: 2;
 }
 
@@ -26,15 +27,14 @@
   color: #fff;
   cursor: pointer;
   text-align: center;
-  transition: all 500ms linear;
+  transition: var(--transition-hover);
 }
 
 .configurationNav__column:hover {
   color: #5946A6;
   background-color: #EDEAFE;
   border-radius: 0.5rem;
-  transition: all 0.5s linear;
-
+  transition: var(--transition-hover);
 }
 
 .configurationNav__wrapper {

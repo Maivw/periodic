@@ -1,25 +1,24 @@
+@import "../_utils.css";
 .header {
-  background-color: #4A4A4A;
+  background-color:var( --main-header-bg);
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  height: 3rem;
+  height: var( --header-height);
   position: static;
   z-index: 1;
   top: 0;
   width: 100%;
-
 }
 
 .header__logoImage {
-  height: 3rem;
+  height: var( --header-height);
   width: 9rem;
 }
 .header__userAccount {
   width: 10rem;
-  height: 3rem;
+  height: var( --header-height);
   margin-right: 3rem;
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -29,14 +28,14 @@
   top: 50%;
   right: 10%;
   transform: translate(-50%, -50%);
-  color: #9B9B9B;
+  color:var(--text-color-primary);
 }
 .header__userImage {
   position: absolute;
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
-  height: 3rem;
+  height: var( --header-height);
   width: 3rem;
   border-radius: 50%;
 }
